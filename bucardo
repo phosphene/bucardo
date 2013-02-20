@@ -7734,12 +7734,6 @@ sub install {
             die "Goodbye!\n";
         }
         elsif ($ans =~ /^\s*P/i) {
-            ## Check on the PID directory before going any further
-            ## This is the only item that can be easily checked here
-            if (! -d $piddir) {
-                print "-->Sorry, that is not a valid PID directory\n";
-                redo GOOEY;
-            }
             last GOOEY;
         }
         else {
